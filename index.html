@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover" />
+  <meta name="theme-color" content="#14181c" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  <meta name="apple-mobile-web-app-title" content="Kinoala" />
+  <title>Kinoala — Films & TV</title>
+  <link rel="manifest" href="manifest.json" />
+  <link rel="stylesheet" href="styles.css?v=5.0.0" />
+</head>
+<body>
+  <div class="app-shell">
+    <main class="main">
+      <header class="topbar">
+        <button class="brand top-brand" data-view="profile" aria-label="Kinoala profile">
+          <span class="brand-mark"><i></i><i></i><i></i></span><span>KINOALA</span>
+        </button>
+        <nav class="nav top-nav" aria-label="Primary navigation">
+          <button data-view="profile" class="active"><span>●</span><b>Profile</b></button>
+          <button data-view="films"><span>▦</span><b>Films</b></button>
+          <button data-view="lists"><span>☷</span><b>Lists</b></button>
+          <button data-view="watchlist"><span>＋</span><b>Watchlist</b></button>
+          <button data-view="activity"><span>◫</span><b>Activity</b></button>
+          <button data-view="settings" hidden><span>⚙</span><b>Settings</b></button>
+        </nav>
+        <div class="search-wrap">
+          <span>⌕</span>
+          <input id="globalSearch" type="search" autocomplete="off" placeholder="Search films and TV…" aria-label="Search films and TV shows" />
+          <kbd>⌘ K</kbd>
+        </div>
+        <button class="secondary small" id="ownerAuthBtn">Log in</button>
+        <button class="primary small" id="quickLogBtn" hidden>＋ Add title</button>
+      </header>
+      <div class="content" id="appContent">
+        <div class="loading-state"><div class="spinner"></div><p>Opening Kinoala…</p></div>
+      </div>
+    </main>
+  </div>
+
+  <div class="search-panel hidden" id="searchPanel" aria-live="polite">
+    <div class="search-panel-head"><strong>Search films & TV</strong><button class="icon-btn" id="closeSearch">×</button></div>
+    <div id="searchResults"></div>
+  </div>
+
+  <div class="modal-backdrop hidden" id="filmModalBackdrop">
+    <section class="film-modal" id="filmModal" role="dialog" aria-modal="true" aria-label="Title details"></section>
+  </div>
+
+  <div class="sheet-backdrop hidden" id="sheetBackdrop">
+    <section class="sheet" id="sheet" role="dialog" aria-modal="true"></section>
+  </div>
+
+  <div class="toast-stack" id="toasts" aria-live="polite"></div>
+  <script type="module" src="app.js?v=5.0.0"></script>
+</body>
+</html>

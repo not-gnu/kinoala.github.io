@@ -1,0 +1,10 @@
+{
+  "name": "Kinoala",
+  "short_name": "Kinoala",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "background_color": "#14181c",
+  "theme_color": "#14181c",
+  "description": "Kinoala film and TV diary"
+}
